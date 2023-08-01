@@ -1,0 +1,95 @@
+<div class="card card--box-shadow">
+    <div class="stack">
+        <h2 class="card-post__title rem">
+            <a href="/">
+                Lorem ipsum, dolor sit amet
+            </a>
+        </h2>
+        <p>
+            Reliable accessible UI components: <code>:focus</code> styles, modals, date pickers,
+            navigation, tables, buttons, SVGs.
+        </p>
+        <a class="card__button rem" href="/">
+            Explore Accessible Components
+        </a>
+    </div>
+</div>
+<style>
+    .card {
+        padding: 2rem;
+        border-radius: 1rem;
+        box-sizing: border-box;
+        
+    }
+    .explore .split-content__wrapper:last-child {
+        margin-bottom: 6rem;
+    }
+    @media (min-width: 60em) {
+        .card {
+            max-width: 23rem;
+            margin-inline: auto;
+            margin-bottom: 6rem;
+        }
+    }
+    .card p {
+        line-height: 1.75;
+    }
+    .card--box-shadow {
+        box-shadow: 0 13px 27px -5px rgba(50,50,93,.25),0 8px 16px -8px rgba(0,0,0,.3),0 -6px 16px -6px rgba(0,0,0,.03);
+        transition: box-shadow .2s ease-in-out;
+    }
+    .card--box-shadow:hover {
+        box-shadow: 0 1px 7px -5px rgba(50,50,93,.25),0 3px 16px -8px rgba(0,0,0,.3),0 -6px 16px -6px rgba(0,0,0,3%);
+    }
+    .card-post__title {
+        margin-top: 0;
+        margin-bottom: 2rem;
+        font-size: calc(1.1rem + 1.1vw);
+        line-height: 1.25;
+    }
+    .card .card-post__title a {
+        text-decoration: underline;
+    }
+    .card--green .card {
+        background-color: hsl(155, 75%, 97%);
+    }
+    .card--orange .card {
+        background-color: hsl(4, 88%, 97%);
+    }
+    .card--violet .card {
+        background-color: hsl(308, 65%, 95%);
+    }
+    .card--green .card-post__title a {
+        color: hsl(157, 74%, 37%);
+    }
+    .card--orange .card-post__title a {
+        color: hsl(21, 100%, 48%);
+    }
+    .card--violet .card-post__title a {
+        color: hsl(309, 74%, 38%);
+    }
+    .card__button {
+        color: hsl(0, 0%, 100%);
+        text-align: center;
+        text-decoration: none;
+        font-weight: bold;
+        display: block;
+        border-radius: 1rem;
+        box-shadow: 0px 3px 6px rgba(255, 255, 255, 0.05);
+        font-size: 1.5rem;
+        padding: 0.5rem 1.3rem;
+        transition: color 0.3s, background-color 0.3s;
+        margin-top: 2rem;
+        text-shadow: 1px 1px 1px rgba(0,0,0,.25);
+    }
+    .card--green .card__button {
+        background-color: hsl(157, 74%, 37%);
+    }
+    .card--orange .card__button {
+        background-color: hsl(21, 100%, 48%);
+    }
+    .card--violet .card__button {
+        background-color: hsl(309, 74%, 38%);
+    }
+    
+</style>

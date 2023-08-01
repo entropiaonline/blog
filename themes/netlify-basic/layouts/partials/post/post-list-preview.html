@@ -1,0 +1,42 @@
+<article class="post-list-preview">
+    <img src="https://entropiaonline.com/EOOE.png" width="100px" height="100px" alt="EOOE" />
+    <div class="post-list-preview__content">
+        <h2><a href="/">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</a></h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo et hic odit aliquam iste veniam illo, cumque sint libero sit, id, sunt qui iure repellat placeat.</p>
+        <div class="post-preview__meta">
+            <time datetime="" class="post-preview__time">Jul 27, 2023</time>
+            <em class="light-grey small">in</em>
+            <a class="post-preview__tag rem" href="/categories/development">Dev</a>,
+            <a class="post-preview__tag rem" href="/categories/eo">EO</a>,
+            <a class="post-preview__tag rem" href="/categories/assets">Assets</a>
+        </div>
+    </div>
+</article>
+<style>
+    .post-list-preview {
+        padding-bottom: 3rem;
+        margin-bottom: 3rem;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    @media (min-width: 40em) {
+        .post-list-preview {
+            flex-direction: row;
+        }
+    }
+    .post-list-preview img {
+        margin-top: 1rem;
+    }
+    .post-list-preview h2 {
+        font-size: calc(1.2rem + 1.1vw);
+        line-height: 1.2;
+        margin-top: 0;
+        margin-bottom: 2rem;
+        font-family: 'REM', sans-serif;
+    }
+    article.post-list-preview p:last-of-type {
+        margin-bottom: 2rem;
+    }
+</style>

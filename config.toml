@@ -1,4 +1,4 @@
-baseURL = 'http://hugo-quickstart-template.netlify.com'
+baseURL = 'http://blog.entropiaonline.com'
 languageCode = 'en-us'
-title = 'Netlify + Hugo Quickstart'
+title = 'Entropia Online Blog'
 theme = 'netlify-basic'
