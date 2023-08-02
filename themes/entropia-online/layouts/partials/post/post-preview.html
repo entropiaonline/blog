@@ -1,8 +1,13 @@
 <article class="post-preview">
     <header>
-        <img src="https://entropiaonline.com/EOOE.png" width="210px" height="210px" alt="EOOE" />
+        <!-- {{ with .Params.thumbnailImage }}
+            {{ with .Resources.GetMatch . }}
+                LINK {{.RelPermalink }}
+                <img src="{{ .RelPermalink }}" width="210px" height="210px" alt="EOOE" />
+            {{ end  }}  
+        {{ end  }} -->
         <div class="post-title">
-            <h2><a href="/">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</a></h2>
+            <h2><a href="/">{{ .Title }}</a></h2>
             <div class="post-preview__meta">
                 <time datetime="" class="post-preview__time">Jul 27, 2023</time>
                 <em class="light-grey small">in</em>
@@ -12,7 +17,7 @@
             </div>
         </div>
     </header>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo et hic odit aliquam iste veniam illo, cumque sint libero sit, id, sunt qui iure repellat placeat. Nam labore aspernatur eius. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab laboriosam harum fugiat expedita, autem, delectus sint tenetur iste repellat eum a temporibus tempora sapiente facere ratione aperiam sed quod officiis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus optio repellat iure reiciendis earum. Pariatur ex ipsam fuga quibusdam quas quo provident excepturi temporibus ad aut! Magnam velit amet iste.</p>
+    <p>{{ .Summary }}</p>
     <p><a class="learn-more rem" href="https://blog.entropiaonline.com">
         Continue reading<svg width="19" height="12" fill="none"><path d="M1 6h17m0 0-5.008-5M18 6l-5.008 5" stroke-width="1.4" stroke-linecap="square" stroke-linejoin="round"></path></svg>
     </a></p>

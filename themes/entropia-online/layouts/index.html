@@ -1,20 +1,16 @@
 {{ define "main" }}
-  <!--Sorts pages by the publishdate field in front matter; you could use by date as well; the reverse puts the newest at the front-->
-  {{ $mysection := ($.Site.GetPage "section" .Section).Pages }}
-  {{ range first 1 $mysection }}
-    {{ range first 1 .Pages }}
-      FIRST: {{ .Content }}
-    {{ end }}
-  {{ end }}
-  {{range last 1 $mysection }}
-    {{ range last 1 .Pages }}
-      LAST: {{ .RelPermalink }}
-    {{ end }}
-  {{ end }}
   <div class="container">
     <div class="main">
       <div class="split-content__wrapper">
-        {{ partial "post/post-preview.html" . }}
+        {{ $mysection := ($.Site.GetPage "section" .Section).Pages }}
+        {{ range first 1 $mysection }}
+          {{ range first 1 .Pages }}
+            {{ partial "post/post-preview.html" . }}
+          {{ end }}
+          <!-- {{ range last 1 .Pages }}
+            LAST: {{ .Title }}
+          {{ end }} -->
+        {{ end }}
         {{ partial "post/post-title-preview.html" . }}
         {{ partial "post/post-title-preview.html" . }}
       </div>
