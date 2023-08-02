@@ -24,6 +24,11 @@ collections:
         required: true
         widget: "datetime"
 
+      - label: "Short Summary"
+        name: "summary"
+        required: false
+        widget: "text"
+
       - label: "Draft"
         name: "draft"
         required: false
@@ -47,11 +52,6 @@ collections:
 
       - label: "Thumbnail Image"
         name: "thumbnailImage"
-        required: false
-        widget: "image"
-
-      - label: "Cover Image"
-        name: "coverImage"
         required: false
         widget: "image"
 
