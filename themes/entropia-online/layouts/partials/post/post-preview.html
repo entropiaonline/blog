@@ -1,16 +1,13 @@
 <article class="post-preview">
     <header>
-        <!-- {{ with .Params.thumbnailImage }}
-            {{ with .Resources.GetMatch . }}
-                LINK {{.RelPermalink }}
-                <img src="{{ .RelPermalink }}" width="210px" height="210px" alt="EOOE" />
-            {{ end  }}  
-        {{ end  }} -->
+        {{ $year := .Date | time.Format "2006/01" }}
+        <img src="/{{ $year }}/{{ .Params.thumbnailimage }}" width="210px" height="210px" alt="EOOE" />
         <div class="post-title">
-            <h2><a href="/">{{ .Title }}</a></h2>
+            <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
             <div class="post-preview__meta">
-                <time datetime="" class="post-preview__time">Jul 27, 2023</time>
+                <time datetime="{{.Date}}" class="post-preview__time">{{ .Date | time.Format ":date_medium" }}</time>
                 <em class="light-grey small">in</em>
+                
                 <a class="post-preview__tag rem" href="/categories/development">Dev</a>,
                 <a class="post-preview__tag rem" href="/categories/eo">EO</a>,
                 <a class="post-preview__tag rem" href="/categories/assets">Assets</a>
