@@ -7,3 +7,5 @@ node_modules/
 # tests output
 cypress/videos/
 
+# build folder
+public/
