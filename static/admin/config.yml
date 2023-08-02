@@ -55,6 +55,10 @@ collections:
         required: false
         widget: "image"
 
+      - label: "Thumbnail Alt Text"
+        name: "thumbnailAltText"
+        widget: "string"
+
       - label: "Body"
         name: "body"
         widget: "markdown"
