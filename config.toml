@@ -1,4 +1,15 @@
-baseURL = 'http://blog.entropiaonline.com'
+baseurl = "/"
 languageCode = 'en-us'
 title = 'Entropia Online Blog'
-theme = 'netlify-basic'
+theme = 'entropia-online'
+
+paginate = 7
+canonifyurls = true
+disableKinds = ["RSS", "taxonomy"]
+
+[permalinks]
+  posts = "/:year/:month/:slug/"
+
+# RSS, categories and tags disabled for an easy start
+# See configuration options for more details: 
+# https://gohugo.io/getting-started/configuration/#toml-configuration

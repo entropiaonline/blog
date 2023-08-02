@@ -1,0 +1,13 @@
+<body>
+  <h1>Nice. It's looking good already.</h1>
+  {{ printf "%#v" . }}
+  <ul>
+    {{ range (where .Pages "Section" "/") }}
+    <li>
+      <a href="{{ .RelPermalink }}">
+        {{ .Title }}
+      </a>
+    </li>
+    {{ end }}
+  </ul>
+</body>

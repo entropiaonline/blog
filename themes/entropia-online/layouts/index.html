@@ -1,0 +1,67 @@
+{{ define "main" }}
+  <pre>{{ printf "%#v" . }}</pre>
+  <div class="container">
+    <div class="main">
+      <div class="split-content__wrapper">
+        {{ partial "post/post-preview.html" . }}
+        {{ partial "post/post-title-preview.html" . }}
+        {{ partial "post/post-title-preview.html" . }}
+      </div>
+      <div class="split-content__third">
+        {{ partial "promo.html" . }}
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="explore gap-2">
+      <div class="split-content__wrapper card--green">
+        {{ partial "card.html" . }}
+      </div>
+      <div class="split-content__wrapper card--orange">
+        {{ partial "card.html" . }}
+      </div>
+      <div class="split-content__wrapper card--violet">
+        {{ partial "card.html" . }}
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="split-content split-content--wrap">
+      <div class="split-content__card">
+        {{ partial "post/post-list-preview.html" . }}
+      </div>
+      <div class="split-content__card to-right">
+        {{ partial "post/post-list-preview.html" . }}
+      </div>
+      <div class="split-content__card">
+        {{ partial "post/post-list-preview.html" . }}
+      </div>
+      <div class="split-content__card to-right">
+        {{ partial "post/post-list-preview.html" . }}
+      </div>
+      <div class="split-content__card">
+        {{ partial "post/post-list-preview.html" . }}
+      </div>
+      <div class="split-content__card to-right">
+        {{ partial "post/post-list-preview.html" . }}
+      </div>
+      <div class="split-content__card">
+        {{ partial "post/post-list-preview.html" . }}
+      </div>
+      <div class="split-content__card to-right">
+        {{ partial "post/post-list-preview.html" . }}
+      </div>
+    </div>
+  </div>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
+{{ end }}
